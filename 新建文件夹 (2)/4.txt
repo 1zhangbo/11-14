@@ -1,0 +1,8 @@
+import urllib
+import urllib.request
+file = urllib.request.urlopen('https://www.baidu.com/')
+data = file.read()
+print(data)
+with open('D:\BaiduNetdiskDownload\pac.txt', "w") as fhandle:
+  fhandle.write(str(data))
+  fhandle.close()

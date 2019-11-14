@@ -1,0 +1,11 @@
+import os
+
+files = os.listdir(r"C:\Users\asus\新建文件夹 (2)")#列出当前目录下所有的文件
+
+for filename in files:
+    portion = os.path.splitext(filename)#分离文件名字和后缀
+    if portion[1] ==".txt":#根据后缀来修改,如无后缀则空
+        newname = portion[0]+".cpp"#要改的新后缀
+ ##newname = portion[1]+".mp3"#要改的新后缀
+        os.chdir(r"C:\Users\asus\新建文件夹 (2)")#切换文件路径,如无路径则要新建或者路径同上,做好备份
+        os.rename(filename,newname)‘’

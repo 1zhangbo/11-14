@@ -1,0 +1,6 @@
+import random
+a = [1,2,3,4,5,6,7,8,9,10]
+for i in range(len(a)):
+ t=random.choice(a)
+ print(t)
+ a.remove(t)
